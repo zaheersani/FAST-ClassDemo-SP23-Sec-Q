@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tables and Forms</title>
+    </head>
+    <body>
+        <!-- <h1>Tables and Forms</h1>
+        <table border="1" width="100%">
+            <caption>Time Table for SP23</caption>
+            <tr>
+                <th>0830-1000</th>
+                <th>1000-1130</th>
+                <th>1130-1300</th>
+            </tr>
+            <tr>
+                <td rowspan="3">Subject 1</td>
+                <td colspan="2">Subject 2</td>
+            </tr>
+            <tr>
+                <td>Subject 1</td>
+                <td>Subject 2</td>
+                <td>Subject 3</td>
+            </tr>
+            <tr>
+                <td>Subject 1</td>
+                <td>Subject 2</td>
+                <td>Subject 3</td>
+            </tr>
+        </table> -->
+
+        <h1>Forms</h1>
+        <form action="endpoint.php" method="get">
+            <fieldset>
+                <legend>Profile Information</legend>
+                <p>
+                    <label>First Name:</label>
+                    <input type="text" name="firstname" value="Ahmed" placeholder="Enter First Name" required />
+                </p>
+                <p>
+                    <label>Last Name:</label>
+                    <input type="text" name="lastname" placeholder="Enter Last Name" />
+                </p>
+                <p>
+                    <label>Email:</label>
+                    <input type="email" name="email" required />
+                </p>
+                <p>
+                    <label>Gender</label>
+                    <input type="radio" name="gender" value="male" />Male
+                    <input type="radio" name="gender" value="female" />Female
+                </p>
+                <p>
+                    <label>Degree Program</label>
+                    <input type="checkbox" name="program" value="BSSE" />SE
+                    <input type="checkbox" name="program" value="BSCS" />CS
+                </p>
+                <p>
+                    <label>Search</label>
+                    <input type="search"  />
+                </p>
+                <p>
+                    <label>About</label>
+                    <textarea cols="40"  rows="4"></textarea>
+                </p>
+                <p>
+                    <label>City</label>
+                    <select name="city">
+                        <optgroup label="Federal">
+                            <option value="isb">Islamabad</option>
+                        </optgroup>
+                        <optgroup label="Punjab">
+                            <option value="rwp">Rawalpindi</option>
+                            <option value="lhr">Lahore</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p>
+                    <input type="text" list="countries" />
+                    <datalist id="countries">
+                        <option>Pakistan</option>
+                        <option>USA</option>
+                        <option>France</option>
+                        <option>Finland</option>
+                    </datalist>
+                </p>
+                <input type="submit" />
+            </fieldset>
+        </form>
+
+    </body>
+
+</html>
