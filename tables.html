@@ -2,13 +2,22 @@
 <html>
     <head>
         <title>Tables and Forms</title>
+        
+        <style>
+            th {
+                background-color: black !important;
+                color: white;
+            }
+        </style>
+
+        <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <!-- <h1>Tables and Forms</h1>
-        <table border="1" width="100%">
+        <h1 style="font-size: 20px;" >Tables and Forms</h1>
+        <table class="main-table" width="100%">
             <caption>Time Table for SP23</caption>
             <tr>
-                <th>0830-1000</th>
+                <th style="background-color: red;">0830-1000</th>
                 <th>1000-1130</th>
                 <th>1130-1300</th>
             </tr>
@@ -16,17 +25,28 @@
                 <td rowspan="3">Subject 1</td>
                 <td colspan="2">Subject 2</td>
             </tr>
-            <tr>
-                <td>Subject 1</td>
+            <tr>                
                 <td>Subject 2</td>
                 <td>Subject 3</td>
             </tr>
-            <tr>
-                <td>Subject 1</td>
+            <tr>                
                 <td>Subject 2</td>
-                <td>Subject 3</td>
+                <td>
+                    <table id="inner-table" width="100%">
+                        <tr>
+                            <td>Category 1</td>
+                            <td>Category 2</td>
+                            <td>Category 3</td>
+                        </tr>
+                        <tr>
+                            <td>Category 1</td>
+                            <td>Category 2</td>
+                            <td>Category 3</td>
+                        </tr>                        
+                    </table>
+                </td>
             </tr>
-        </table> -->
+        </table>
 
         <h1>Forms</h1>
         <form action="endpoint.php" method="get">

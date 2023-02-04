@@ -1,0 +1,13 @@
+.main-table {
+    border: 5px dotted #0F0;
+}
+#inner-table {
+    border: 1px dashed red;
+}
+td, th {
+    border: 1px solid #00F;
+    padding: 5px 6px;
+}
+th {
+    background-color: grey;
+}
