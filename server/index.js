@@ -1,5 +1,4 @@
 const http = require('http');
-const { json } = require('stream/consumers');
 const hostname = '127.0.0.1';
 const port = 3000;
 
