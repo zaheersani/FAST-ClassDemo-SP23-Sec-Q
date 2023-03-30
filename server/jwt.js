@@ -1,10 +1,11 @@
 // Importing modules
-const express = require("express");
-const jwt = require("jsonwebtoken");
 const Users = require("./users.json");
-const dotenv = require("dotenv").config();
-
-// console.log(process.env.SECRET)
+// Import Express
+const express = require("express");
+// Import jsonwebtoken for JWT
+const jwt = require("jsonwebtoken");
+// Import dotenv to read .env file
+require("dotenv").config();
 
 const app = express();
 app.use(express.json());
@@ -51,7 +52,7 @@ app.post("/login", (req, res, next) => {
 app.post("/signup", async (req, res, next) => {
     const { name, email, password } = req.body;
     const newUser = {
-        id : 3,
+        id: 3,
         name,
         email,
         password,
@@ -96,10 +97,11 @@ app.get('/accessResource', (req, res) => {
     if (!token) {
         res.status(200).json({
             success: false,
-            message: "Error! Token was not provided."});
-	}
-	//Decoding the token
-    jwt.verify(token, "secretkeyappearshere", (err, decodedToken) => {
+            message: "Error! Token was not provided."
+        });
+    }
+    //Decoding the token
+    jwt.verify(token, process.env.SECRET, (err, decodedToken) => {
         if (decodedToken) {
             res.status(200).json({
                 success: true,
@@ -150,4 +152,4 @@ app.get('/accessResource2', auth, (req, res) => {
     });
 })
 
-app.listen(process.env.PORT || 3000, ()=>console.log('server is running!'))
+app.listen(process.env.PORT || 3000, () => console.log('server is running!'))
