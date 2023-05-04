@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Routing from './Routing';
 import reportWebVitals from './reportWebVitals';
 
 import { Counter, Counter2 } from "./Counter";
@@ -11,12 +11,12 @@ import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    {/* <BrowserRouter>
+      <Routing />
+    </BrowserRouter> */}
     {/* <Counter />
-    <Counter2 num={3} />
-    <UsersAPICall /> */}
+    <Counter2 num={3} /> */}
+    <UsersAPICall />
   </React.StrictMode>
 );
 

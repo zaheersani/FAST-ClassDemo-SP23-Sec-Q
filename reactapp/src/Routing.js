@@ -3,7 +3,7 @@ import './App.css';
 import { Route, Routes, Link, useParams, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-function App() {
+function Routing() {
   const [isLogin, setLogin] = useState(false)
 
   return (
@@ -115,4 +115,4 @@ const Nav = ({isLogin}) => {
 }
 
 
-export default App;
+export default Routing;
